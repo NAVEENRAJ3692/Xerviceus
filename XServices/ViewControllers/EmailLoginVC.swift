@@ -10,13 +10,18 @@ import UIKit
 
 class EmailLoginVC: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var password_Txt: UITextField!
+    @IBOutlet weak var emailID_Txt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func signIn_Action(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -1,5 +1,5 @@
 //
-//  MobileLoginVC.swift
+//  OtpVC.swift
 //  XServices
 //
 //  Created by K Saravana Kumar on 27/08/19.
@@ -8,22 +8,22 @@
 
 import UIKit
 
-class MobileLoginVC: UIViewController {
+class OtpVC: UIViewController {
 
-    @IBOutlet weak var countryCode_Txt: UITextField!
-    @IBOutlet weak var mobileNo_Txt: UITextField!
-    
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var proceed_Btn: UIButton!
+    @IBOutlet weak var sec_Txt: UILabel!
+    @IBOutlet weak var otp_Txt: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func proceed_Action(_ sender: Any) {
+    @IBAction func resend_Action(_ sender: Any) {
     }
     
+    @IBAction func signIn_Action(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

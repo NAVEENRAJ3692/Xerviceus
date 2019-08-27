@@ -1,5 +1,5 @@
 //
-//  MobileLoginVC.swift
+//  ForgotVC.swift
 //  XServices
 //
 //  Created by K Saravana Kumar on 27/08/19.
@@ -8,22 +8,19 @@
 
 import UIKit
 
-class MobileLoginVC: UIViewController {
+class ForgotVC: UIViewController {
 
-    @IBOutlet weak var countryCode_Txt: UITextField!
-    @IBOutlet weak var mobileNo_Txt: UITextField!
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var proceed_Btn: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func proceed_Action(_ sender: Any) {
+    @IBAction func emailID_Txt(_ sender: Any) {
     }
     
+    @IBAction func proceed_Action(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 

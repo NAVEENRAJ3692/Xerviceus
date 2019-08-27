@@ -12,6 +12,8 @@
 		43EE931FF99D9C38BE526202 /* Pods_XServicesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40D9CE8F6B9AA7A3C6437008 /* Pods_XServicesUITests.framework */; };
 		B72B830F23150404003A8C08 /* MobileLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B830E23150404003A8C08 /* MobileLoginVC.swift */; };
 		B72B831123150429003A8C08 /* EmailLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B831023150429003A8C08 /* EmailLoginVC.swift */; };
+		B72B83132315128B003A8C08 /* OtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B83122315128B003A8C08 /* OtpVC.swift */; };
+		B72B831523151384003A8C08 /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B831423151384003A8C08 /* ForgotVC.swift */; };
 		B72D5F092313B340003CC50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72D5F082313B340003CC50A /* AppDelegate.swift */; };
 		B72D5F0B2313B340003CC50A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72D5F0A2313B340003CC50A /* SceneDelegate.swift */; };
 		B72D5F0D2313B340003CC50A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72D5F0C2313B340003CC50A /* ViewController.swift */; };
@@ -59,6 +61,8 @@
 		B72200D84A6DC84EE8B9E838 /* Pods-XServices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XServices.release.xcconfig"; path = "Target Support Files/Pods-XServices/Pods-XServices.release.xcconfig"; sourceTree = "<group>"; };
 		B72B830E23150404003A8C08 /* MobileLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileLoginVC.swift; sourceTree = "<group>"; };
 		B72B831023150429003A8C08 /* EmailLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginVC.swift; sourceTree = "<group>"; };
+		B72B83122315128B003A8C08 /* OtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVC.swift; sourceTree = "<group>"; };
+		B72B831423151384003A8C08 /* ForgotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotVC.swift; sourceTree = "<group>"; };
 		B72D5F052313B340003CC50A /* XServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72D5F082313B340003CC50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B72D5F0A2313B340003CC50A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				B72D5F562314062B003CC50A /* LandingVC.swift */,
 				B72B830E23150404003A8C08 /* MobileLoginVC.swift */,
 				B72B831023150429003A8C08 /* EmailLoginVC.swift */,
+				B72B83122315128B003A8C08 /* OtpVC.swift */,
+				B72B831423151384003A8C08 /* ForgotVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -513,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72B83132315128B003A8C08 /* OtpVC.swift in Sources */,
 				B72D5F0D2313B340003CC50A /* ViewController.swift in Sources */,
 				B72D5F092313B340003CC50A /* AppDelegate.swift in Sources */,
 				B72D5F522313FE03003CC50A /* ProgressIndicatorManager.swift in Sources */,
@@ -523,6 +530,7 @@
 				B72B831123150429003A8C08 /* EmailLoginVC.swift in Sources */,
 				B72D5F552314009D003CC50A /* SARMaterialDesignSpinner.swift in Sources */,
 				B72D5F4C2313D770003CC50A /* ServicesGradientButton.swift in Sources */,
+				B72B831523151384003A8C08 /* ForgotVC.swift in Sources */,
 				B72D5F4E2313D81C003CC50A /* UIViewExtensions.swift in Sources */,
 				B72D5F132313B341003CC50A /* XServices.xcdatamodeld in Sources */,
 				B72D5F572314062B003CC50A /* LandingVC.swift in Sources */,
