@@ -7,12 +7,14 @@ PODS:
     - ObjectMapper (~> 3.4)
   - ImagePicker (3.1.0)
   - ObjectMapper (3.5.1)
+  - SwiftKeychainWrapper (3.4.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - AlamofireObjectMapper
   - ImagePicker
+  - SwiftKeychainWrapper
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,6 +23,7 @@ SPEC REPOS:
     - AlamofireObjectMapper
     - ImagePicker
     - ObjectMapper
+    - SwiftKeychainWrapper
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -28,7 +31,8 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
   ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  SwiftKeychainWrapper: 6fc49fbf7d4a6b0772917acb0e53a1639f6078d6
 
-PODFILE CHECKSUM: 8817740e81b786c7a464a7bbe909e10fae2dc22b
+PODFILE CHECKSUM: 7553fe934ae11534f80d35474c8a98c68b168f35
 
 COCOAPODS: 1.6.1

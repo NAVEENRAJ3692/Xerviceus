@@ -10,6 +10,8 @@ target 'XServices' do
 	pod 'AlamofireObjectMapper'
 	pod 'AlamofireImage'
 	pod 'ImagePicker'
+  pod 'SwiftKeychainWrapper'
+
 
   target 'XServicesTests' do
     inherit! :search_paths

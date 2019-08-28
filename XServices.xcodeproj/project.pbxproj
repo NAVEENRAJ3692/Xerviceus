@@ -14,6 +14,13 @@
 		B72B831123150429003A8C08 /* EmailLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B831023150429003A8C08 /* EmailLoginVC.swift */; };
 		B72B83132315128B003A8C08 /* OtpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B83122315128B003A8C08 /* OtpVC.swift */; };
 		B72B831523151384003A8C08 /* ForgotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B831423151384003A8C08 /* ForgotVC.swift */; };
+		B72B8317231529CC003A8C08 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B8316231529CC003A8C08 /* APIManager.swift */; };
+		B72B831923152AB2003A8C08 /* XerviceusConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B831823152AB2003A8C08 /* XerviceusConstants.swift */; };
+		B72B831B2315329C003A8C08 /* CurrentUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B831A2315329C003A8C08 /* CurrentUserManager.swift */; };
+		B72B831D2315371C003A8C08 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B72B831C2315371C003A8C08 /* Tabbar.storyboard */; };
+		B72B831F23154A78003A8C08 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B831E23154A78003A8C08 /* User.swift */; };
+		B72B832123154CB6003A8C08 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B832023154CB6003A8C08 /* UserDefaultsHelper.swift */; };
+		B72B832323155234003A8C08 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72B832223155234003A8C08 /* UIButtonExtensions.swift */; };
 		B72D5F092313B340003CC50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72D5F082313B340003CC50A /* AppDelegate.swift */; };
 		B72D5F0B2313B340003CC50A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72D5F0A2313B340003CC50A /* SceneDelegate.swift */; };
 		B72D5F0D2313B340003CC50A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72D5F0C2313B340003CC50A /* ViewController.swift */; };
@@ -63,6 +70,13 @@
 		B72B831023150429003A8C08 /* EmailLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginVC.swift; sourceTree = "<group>"; };
 		B72B83122315128B003A8C08 /* OtpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpVC.swift; sourceTree = "<group>"; };
 		B72B831423151384003A8C08 /* ForgotVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotVC.swift; sourceTree = "<group>"; };
+		B72B8316231529CC003A8C08 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		B72B831823152AB2003A8C08 /* XerviceusConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XerviceusConstants.swift; sourceTree = "<group>"; };
+		B72B831A2315329C003A8C08 /* CurrentUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserManager.swift; sourceTree = "<group>"; };
+		B72B831C2315371C003A8C08 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		B72B831E23154A78003A8C08 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B72B832023154CB6003A8C08 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		B72B832223155234003A8C08 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		B72D5F052313B340003CC50A /* XServices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XServices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72D5F082313B340003CC50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B72D5F0A2313B340003CC50A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,10 +185,12 @@
 				B72D5F082313B340003CC50A /* AppDelegate.swift */,
 				B72D5F0A2313B340003CC50A /* SceneDelegate.swift */,
 				B72D5F0E2313B341003CC50A /* Main.storyboard */,
+				B72B831C2315371C003A8C08 /* Tabbar.storyboard */,
 				B72D5F142313B39A003CC50A /* Assets.xcassets */,
 				B72D5F162313B39A003CC50A /* LaunchScreen.storyboard */,
 				B72D5F192313B39B003CC50A /* Info.plist */,
 				B72D5F112313B341003CC50A /* XServices.xcdatamodeld */,
+				B72B831823152AB2003A8C08 /* XerviceusConstants.swift */,
 			);
 			path = XServices;
 			sourceTree = "<group>";
@@ -231,6 +247,8 @@
 				B72D5F482313D4DB003CC50A /* ThemeManager.swift */,
 				B72D5F4F2313D8B5003CC50A /* GradientManager.swift */,
 				B72D5F512313FE02003CC50A /* ProgressIndicatorManager.swift */,
+				B72B8316231529CC003A8C08 /* APIManager.swift */,
+				B72B831A2315329C003A8C08 /* CurrentUserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -241,6 +259,7 @@
 				B72D5F412313C11A003CC50A /* UIViewControllerExtensions.swift */,
 				B72D5F432313C165003CC50A /* UIColorExtensions.swift */,
 				B72D5F4D2313D81C003CC50A /* UIViewExtensions.swift */,
+				B72B832223155234003A8C08 /* UIButtonExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -248,6 +267,7 @@
 		B72D5F402313BE26003CC50A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B72B832023154CB6003A8C08 /* UserDefaultsHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -255,6 +275,7 @@
 		B72D5F452313D194003CC50A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				B72B831E23154A78003A8C08 /* User.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -393,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B72B831D2315371C003A8C08 /* Tabbar.storyboard in Resources */,
 				B72D5F182313B39A003CC50A /* LaunchScreen.storyboard in Resources */,
 				B72D5F152313B39A003CC50A /* Assets.xcassets in Resources */,
 				B72D5F102313B341003CC50A /* Main.storyboard in Resources */,
@@ -496,6 +518,7 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ImagePicker/ImagePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -506,6 +529,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImagePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -520,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B72B83132315128B003A8C08 /* OtpVC.swift in Sources */,
+				B72B8317231529CC003A8C08 /* APIManager.swift in Sources */,
 				B72D5F0D2313B340003CC50A /* ViewController.swift in Sources */,
 				B72D5F092313B340003CC50A /* AppDelegate.swift in Sources */,
 				B72D5F522313FE03003CC50A /* ProgressIndicatorManager.swift in Sources */,
@@ -527,14 +552,19 @@
 				B72D5F422313C11A003CC50A /* UIViewControllerExtensions.swift in Sources */,
 				B72D5F492313D4DB003CC50A /* ThemeManager.swift in Sources */,
 				B72D5F442313C165003CC50A /* UIColorExtensions.swift in Sources */,
+				B72B831B2315329C003A8C08 /* CurrentUserManager.swift in Sources */,
+				B72B832123154CB6003A8C08 /* UserDefaultsHelper.swift in Sources */,
+				B72B831F23154A78003A8C08 /* User.swift in Sources */,
 				B72B831123150429003A8C08 /* EmailLoginVC.swift in Sources */,
 				B72D5F552314009D003CC50A /* SARMaterialDesignSpinner.swift in Sources */,
 				B72D5F4C2313D770003CC50A /* ServicesGradientButton.swift in Sources */,
 				B72B831523151384003A8C08 /* ForgotVC.swift in Sources */,
 				B72D5F4E2313D81C003CC50A /* UIViewExtensions.swift in Sources */,
+				B72B831923152AB2003A8C08 /* XerviceusConstants.swift in Sources */,
 				B72D5F132313B341003CC50A /* XServices.xcdatamodeld in Sources */,
 				B72D5F572314062B003CC50A /* LandingVC.swift in Sources */,
 				B72D5F502313D8B5003CC50A /* GradientManager.swift in Sources */,
+				B72B832323155234003A8C08 /* UIButtonExtensions.swift in Sources */,
 				B72D5F0B2313B340003CC50A /* SceneDelegate.swift in Sources */,
 				B72D5F472313D444003CC50A /* Theme.swift in Sources */,
 			);
@@ -721,7 +751,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.securenext.XServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -741,7 +771,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.securenext.XServices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
