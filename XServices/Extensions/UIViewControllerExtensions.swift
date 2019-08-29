@@ -10,6 +10,16 @@ import UIKit
 
 extension UIViewController {
     
+    func proceedToApplication(){
+        let vc = UIStoryboard.instantiateLoginViewController(LandingVC.self)
+        self.view.window?.fadeSwitchRootViewController(vc)
+    }
+    
+    class func getIdentifier() -> String {
+        let className = NSStringFromClass(self).components(separatedBy: ".").last!
+        return className.lowercaseFirst
+    }
+    
     func showStandardAlertDialog(title:String = "Error", msg:String = "An unhandled error occurred."){
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK 😩", style: UIAlertAction.Style.default, handler: nil))

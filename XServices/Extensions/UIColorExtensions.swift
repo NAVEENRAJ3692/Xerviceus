@@ -14,7 +14,7 @@ extension UIColor {
 
     
     class func onboardingDotActiveColor() -> UIColor {
-        return UIColor(red: 0/255.0, green: 230/255.0, blue: 118/255.0, alpha: 1.0)
+        return UIColor(red: 117/255.0, green: 1/255.0, blue: 188/255.0, alpha: 1.0)
     }
     
 }

@@ -16,6 +16,8 @@ class ForgotVC: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view.
        // NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name:UIResponder.keyboardWillShowNotification, object: nil)
       //  NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
+        setupNavigation()
     }
   /*  @objc func keyboardWillShow(notification:NSNotification){
         var userInfo = notification.userInfo!
@@ -63,6 +65,7 @@ class ForgotVC: UIViewController,UITextFieldDelegate {
         navigationItem.title = "Forgot Password"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_arrow"), style: UIBarButtonItem.Style.done, target: self, action: #selector(rewindview))
+        navigationItem.leftBarButtonItem?.tintColor = .white
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
     }

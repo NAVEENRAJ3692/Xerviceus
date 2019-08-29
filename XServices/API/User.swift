@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 
 class User: Mappable {
+    
     required init?(map: Map) {
         
     }

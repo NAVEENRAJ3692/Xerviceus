@@ -29,7 +29,7 @@ class OtpVC: UIViewController,UITextFieldDelegate {
         otp_Txt.layer.borderWidth = 2
         otp_Txt.layer.borderColor = UIColor(red: 117/255, green: 1/255, blue: 188/255, alpha: 1).cgColor
 
-        
+        setupNavigation()
     }
     @objc func keyboardWillShow(notification:NSNotification){
         let userInfo = notification.userInfo!
@@ -68,8 +68,8 @@ class OtpVC: UIViewController,UITextFieldDelegate {
     }
     @objc func doneAction()
     {
-        let scrollPoint = CGPoint(x: 0, y: 0)
-        scrollView.setContentOffset(scrollPoint, animated: true)
+//        let scrollPoint = CGPoint(x: 0, y: 0)
+//        scrollView.setContentOffset(scrollPoint, animated: true)
         self.otp_Txt.resignFirstResponder()
         
     }
@@ -120,6 +120,7 @@ class OtpVC: UIViewController,UITextFieldDelegate {
         navigationItem.title = "OTP"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_arrow"), style: UIBarButtonItem.Style.done, target: self, action: #selector(rewindview))
+        navigationItem.leftBarButtonItem?.tintColor = .white
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
     }

@@ -28,8 +28,8 @@ struct XerviceusConstants {
     
     #else
     
-    // static let apiHostUri = ApiEnvironment.Release.rawValue
-    static let apiHostUri = ApiEnvironment.Debug.rawValue
+     static let apiHostUri = ApiEnvironment.Release.rawValue
+//    static let apiHostUri = ApiEnvironment.Debug.rawValue
     
     #endif
     

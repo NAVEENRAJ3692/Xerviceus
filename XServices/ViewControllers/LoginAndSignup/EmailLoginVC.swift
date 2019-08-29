@@ -32,7 +32,7 @@ class EmailLoginVC: UIViewController,UITextFieldDelegate {
         self.setupNavigation()
         
         passhide_Btn.setImage(UIImage(named: "Unchecked"), for: .normal)
-        passhide_Btn.setImage(UIImage(named: "Checked"), for: .selected)
+//        passhide_Btn.setImage(UIImage(named: "Checked"), for: .selected)
         termsTextView.attributedText = self.attributedMessage(message: "By Signing up, you agree to out. Terms and Conditions")
 
     }
@@ -46,15 +46,15 @@ class EmailLoginVC: UIViewController,UITextFieldDelegate {
         for word in messageArray {
             if word.contains("Terms"){
                 
-                dic = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.blue,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue as AnyObject, NSAttributedString.Key(rawValue: wordTypeDiscover): termsDiscover as AnyObject, NSAttributedString.Key(rawValue: termsDiscover):word as AnyObject]
+                dic = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.blue,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 10), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue as AnyObject, NSAttributedString.Key(rawValue: wordTypeDiscover): termsDiscover as AnyObject, NSAttributedString.Key(rawValue: termsDiscover):word as AnyObject]
             }
                 
             else if word.contains("Conditions") {
-                dic = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.blue,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 12), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue as AnyObject, NSAttributedString.Key(rawValue: wordTypeDiscover): conditionsDiscover as AnyObject, NSAttributedString.Key(rawValue: conditionsDiscover):word as AnyObject]
+                dic = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.blue,NSAttributedString.Key.font:UIFont.systemFont(ofSize: 10), NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue as AnyObject, NSAttributedString.Key(rawValue: wordTypeDiscover): conditionsDiscover as AnyObject, NSAttributedString.Key(rawValue: conditionsDiscover):word as AnyObject]
             }
                 
             else {
-                dic = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.black,NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12), NSAttributedString.Key(rawValue: wordTypeDiscover): normalDiscover as AnyObject, NSAttributedString.Key(rawValue: normalDiscover):word as AnyObject]
+                dic = [NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue):UIColor.black,NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10), NSAttributedString.Key(rawValue: wordTypeDiscover): normalDiscover as AnyObject, NSAttributedString.Key(rawValue: normalDiscover):word as AnyObject]
             }
             
             let subString = NSAttributedString(string: "\(word) ", attributes: dic)
@@ -92,8 +92,8 @@ class EmailLoginVC: UIViewController,UITextFieldDelegate {
         }else if password_Txt.text!.isEmpty {
             self.showStandardAlertDialog(title: "Alert!", msg: "Please enter the password")
         }else{
-//            logInAPICall()
-            self.performSegue(withIdentifier: "segueEmailLoginToTabbar", sender: nil)
+            logInAPICall()
+//            self.performSegue(withIdentifier: "segueEmailLoginToTabbar", sender: nil)
 
         }
     }
@@ -105,7 +105,14 @@ class EmailLoginVC: UIViewController,UITextFieldDelegate {
             self.hideProgressIndicator()
             
             if error == nil{
+                guard let value = response else {
+                    return
+                }
+                CurrentUserManager.shared.jwtAuthToken = value.token!
+                CurrentUserManager.shared.UserType = String(value.userType!)
+                CurrentUserManager.shared.userSignInComplete = true
                 self.performSegue(withIdentifier: "segueEmailLoginToTabbar", sender: nil)
+//                self.proceedToApplication()
             }else{
                 self.showStandardAlertDialog(title: "error", msg: error!.localizedDescription)
             }
@@ -120,9 +127,13 @@ class EmailLoginVC: UIViewController,UITextFieldDelegate {
             if button.isSelected {
                 // set deselected
                 button.isSelected = false
+                passhide_Btn.setImage(UIImage(named: "Unchecked"), for: .normal)
+//                passhide_Btn.isSecureTextEntry.toggle()
             } else {
                 // set selected
                 button.isSelected = true
+                passhide_Btn.setImage(UIImage(named: "Checked"), for: .normal)
+//                passhide_Btn.isSecureTextEntry.toggle()
             }
         }
         
@@ -148,6 +159,7 @@ class EmailLoginVC: UIViewController,UITextFieldDelegate {
         navigationItem.title = "Email Login"
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "nav_back_arrow"), style: UIBarButtonItem.Style.done, target: self, action: #selector(rewindview))
+        navigationItem.leftBarButtonItem?.tintColor = .white
         navigationItem.leftBarButtonItem?.image = navigationItem.leftBarButtonItem?.image!.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
         
     }

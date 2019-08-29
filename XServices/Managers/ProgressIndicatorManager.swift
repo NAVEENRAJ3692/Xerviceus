@@ -46,7 +46,7 @@ class ProgressIndicatorManager {
         backgroundView.layer.cornerRadius = 10
         backgroundView.layer.masksToBounds = true
         progressIndicator.insertSubview(backgroundView, at: 0)
-        backgroundView.backgroundColor = UIColor.darkGray
+        backgroundView.backgroundColor = UIColor.clear
     }
     
 }
